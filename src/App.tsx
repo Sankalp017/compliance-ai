@@ -7,6 +7,7 @@ import { MainLayout } from "@/components/layouts/MainLayout";
 import Index from "./pages/Index";
 import Documents from "./pages/Documents";
 import DocumentDetail from "./pages/DocumentDetail";
+import GapAnalysis from "./pages/GapAnalysis";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -39,6 +40,14 @@ const App = () => (
             element={
               <MainLayout>
                 <DocumentDetail />
+              </MainLayout>
+            }
+          />
+          <Route
+            path="/gap-analysis"
+            element={
+              <MainLayout>
+                <GapAnalysis />
               </MainLayout>
             }
           />
