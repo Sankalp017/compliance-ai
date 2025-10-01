@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { MainLayout } from "@/components/layouts/MainLayout";
 import Index from "./pages/Index";
+import Documents from "./pages/Documents";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,7 +25,14 @@ const App = () => (
               </MainLayout>
             }
           />
-          {/* ADD ALL CUSTOM ROUTES HERE, WRAPPED IN MainLayout IF NEEDED */}
+          <Route
+            path="/documents"
+            element={
+              <MainLayout>
+                <Documents />
+              </MainLayout>
+            }
+          />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
