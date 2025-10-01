@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import Documents from "./pages/Documents";
 import DocumentDetail from "./pages/DocumentDetail";
 import GapAnalysis from "./pages/GapAnalysis";
+import AuditTrail from "./pages/AuditTrail";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -48,6 +49,14 @@ const App = () => (
             element={
               <MainLayout>
                 <GapAnalysis />
+              </MainLayout>
+            }
+          />
+          <Route
+            path="/audit-trail"
+            element={
+              <MainLayout>
+                <AuditTrail />
               </MainLayout>
             }
           />
